@@ -1,3 +1,20 @@
+const express = require('express')
+const app = express()
+const http = require('http')
+const axios = require('axios');
+const qs = require('qs');
+const { Server } = require('socket.io')
+
+app.get('/', (req, res) => {
+    res.json({ msg: 'Hi' })
+})   
+
+
+
+
+app.listen(8051, () => {
+    console.log('Server Started')
+})
 require('dotenv').config()
 const { default: mongoose } = require('mongoose');
 var cron = require('node-cron');
